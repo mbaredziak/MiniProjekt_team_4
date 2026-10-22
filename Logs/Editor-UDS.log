@@ -1,0 +1,9 @@
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: b6298d7b79c0bc2268a3dcfd9f002d59
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Shut down UDS service system complete
