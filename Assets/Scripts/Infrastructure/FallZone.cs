@@ -1,5 +1,6 @@
 using UnityEngine;
 using Game.Application;
+using Game.Composition;
 
 namespace Game.Infrastructure
 {
@@ -20,6 +21,13 @@ namespace Game.Infrastructure
         {
             if (other.CompareTag("Player"))
             {
+                // Dopisane: zliczanie upadku w GameSessionService
+                var bootstrap = FindAnyObjectByType<GameBootstrap>();
+                if (bootstrap != null && bootstrap.GameSession != null)
+                {
+                    bootstrap.GameSession.RegisterFall();
+                }
+
                 var data = m_checkpointService.CurrentCheckpoint;
                 
                 m_rigidBody.linearVelocity = Vector3.zero;
